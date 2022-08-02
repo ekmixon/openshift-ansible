@@ -20,10 +20,10 @@ class DummyModule(AnsibleModule):
     def _load_params(self):
         self.params = {}
 
-    def exit_json(*args, **kwargs):
+    def exit_json(self, **kwargs):
         return 0
 
-    def fail_json(*args, **kwargs):
+    def fail_json(self, **kwargs):
         raise Exception(kwargs['msg'])
 
 
